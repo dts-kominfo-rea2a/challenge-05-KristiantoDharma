@@ -7,7 +7,7 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "2. Nama"
 // ...
 const sorter = (names, fnSort) => {
-  const sort =  (names);
+  const sort =  fnSort(names);
   const result = [];
   for (let i = 0; i < sort.length; i++) {
     result.push((i + 1) + '. ' + sort[i])
@@ -28,14 +28,14 @@ const sortDescending = (names) => {
 };
 
 // ! JANGAN DIMODIFIKASI
-// (function main() {
-//   console.log(sorter?.(names, sortAscending)?.join("\n"));
-//   console.log(sorter?.(names, sortDescending)?.join("\n"));
-// })();
+(function main() {
+  console.log(sorter?.(names, sortAscending)?.join("\n"));
+  console.log(sorter?.(names, sortDescending)?.join("\n"));
+})();
 
-// module.exports = {
-//   sorter,
-//   sortAscending,
-//   sortDescending,
-//   names,
-// };
+module.exports = {
+  sorter,
+  sortAscending,
+  sortDescending,
+  names,
+};
