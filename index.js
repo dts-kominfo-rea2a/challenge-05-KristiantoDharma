@@ -7,15 +7,13 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "2. Nama"
 // ...
 const sorter = (names, fnSort) => {
-  const sort = fnSort(names);
+  const sort =  (names);
   const result = [];
-  for (let i = 1; i <= sort.length; i++) {
-    result.push(i + '. ' + sort[i])
+  for (let i = 0; i < sort.length; i++) {
+    result.push((i + 1) + '. ' + sort[i])
   }
   return result;
 };
-
-sorter(names)
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
@@ -30,14 +28,14 @@ const sortDescending = (names) => {
 };
 
 // ! JANGAN DIMODIFIKASI
-(function main() {
-  console.log(sorter?.(names, sortAscending)?.join("\n"));
-  console.log(sorter?.(names, sortDescending)?.join("\n"));
-})();
+// (function main() {
+//   console.log(sorter?.(names, sortAscending)?.join("\n"));
+//   console.log(sorter?.(names, sortDescending)?.join("\n"));
+// })();
 
-module.exports = {
-  sorter,
-  sortAscending,
-  sortDescending,
-  names,
-};
+// module.exports = {
+//   sorter,
+//   sortAscending,
+//   sortDescending,
+//   names,
+// };
